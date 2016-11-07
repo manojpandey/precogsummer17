@@ -1,0 +1,88 @@
+    html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.banner {
+    height: 80%;
+    width: 100%;
+}
+
+.banner_link {
+    height: 25%;
+    width: 100%;
+    padding: 5px;
+}
+
+.banner_link > h2,
+h6 {
+    color: black;
+    text-transform: none;
+}
+
+.banner_link > h2 {
+    font-size: 20px;
+}
+
+.image-credit {
+    font-size: 8px;
+}
+
+#pic {
+    background: url("../img/banner.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+#pic::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url("../img/banner.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+#pic.blur::before {
+    opacity: 1;
+}
+
+.banner_link {
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 16px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.banner_link a::after {
+    content: '';
+    /*display: block;*/
+    margin: auto;
+    height: 1px;
+    width: 90px;
+    transition: width .2s ease, background-color .5s ease;
+}
+
+.banner_link a:hover:after {
+    width: 0px;
+    background: transparent;
+}
