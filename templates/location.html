@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>US Elections 2016</title>
+    <meta name="description" content="Brief analysis of tweets to see what's happening on Twitter for Trump and Hillary. Anyways, it's more of chosing the lesser of the evils !">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-theme.min.css')}}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/onhover.css')}}">
+    <meta name="msapplication-TileColor" content="#079ae7">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#079ae7">
+    <script src="{{url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript'>
+    google.charts.load('upcoming', {
+        'packages': ['geochart']
+    });
+    google.charts.setOnLoadCallback(drawMarkersMap);
+
+    function drawMarkersMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['lat', 'long'],
+            [37.47472222, -84.51194444],
+            [48.85693, 2.3412],
+            [50.501, 4.4768],
+            [-0.0244, 37.9039],
+            [62.1984, 17.5514],
+            [56.9547, -98.309],
+            [1.3656, 103.8277],
+            [18.2233, -66.4289],
+            [38.8991, -77.029],
+            [32.9090154, 6.54845542],
+            [42.3561185, -71.0552516],
+            [38.8991, -77.029],
+            [62.1984, 17.5514],
+            [51.48470686, -3.17453384],
+            [32.61265711, -83.64812449],
+            [37.47472222, -84.51194444],
+            [40.8140497, -73.059054],
+            [40.6419303, -73.94970203],
+            [37.47472222, -84.51194444],
+            [6.38490667, 3.36181641],
+            [40.771451, -74.204717],
+            [40.771451, -74.204717],
+            [30.17627105, -95.53548326],
+            [4.828516, 7.003183],
+            [40.7044, -74.1907],
+            [37.47472222, -84.51194444],
+            [40.7, -73.95],
+            [52.3638496, 4.9113002],
+            [37.47472222, -84.51194444],
+            [-0.0244, 37.9039],
+            [62.1984, 17.5514],
+            [50.501, 4.4768],
+            [56.9547, -98.309],
+            [53.4196, -8.2406],
+            [38.8991, -77.029],
+            [18.2233, -66.4289],
+            [-8.8412799, 13.2335273],
+            [38.907192, -77.036871],
+            [42.71, 23.3],
+            [38.74751841, -9.09904258],
+            [40.8139913, -73.0791059],
+            [41.99705911, 12.51122832],
+            [38.9395, -77.0245],
+            [-29.86068, 31.0164835],
+            [38.90181532, -77.03733586],
+            [25.78111669, -80.19240081],
+            [4.6564, -74.1178],
+            [37.47472222, -84.51194444],
+            [51.7765107, 19.4544773],
+            [26.63516956, -80.13394182],
+            [43.4428973, -3.4598081],
+            [10.3505307, -67.0410601],
+            [53.2796966, -6.2678475],
+            [56.9547, -98.309],
+            [1.3656, 103.8277],
+            [18.2233, -66.4289],
+            [41.95748658, -91.77431962],
+            [4.828516, 7.003183],
+            [40.809349, -74.181289],
+            [40.809349, -74.181289],
+            [-29.8606003, 31.0165745],
+            [6.40674257, 3.38378906],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.53773823, 3.38378906],
+            [6.47224464, 3.36181641],
+            [6.40674257, 3.36181641],
+            [6.49407679, 3.38378906],
+            [6.45041156, 3.33984375],
+            [6.51590798, 3.38378906],
+            [6.53773823, 3.33984375],
+            [6.47224464, 3.36181641],
+            [6.45041156, 3.38378906],
+            [-29.8606098, 31.0166788],
+            [37.47472222, -84.51194444],
+            [41.06850722, 28.99248102],
+            [43.64927894, -79.38061656],
+            [40.771451, -74.204717],
+            [40.771451, -74.204717],
+            [51.04839287, -114.05940132],
+            [1.3656, 103.8277],
+            [-37.81456444, 144.96633768],
+            [37.47472222, -84.51194444],
+            [56.9547, -98.309],
+            [53.4196, -8.2406],
+            [1.3656, 103.8277],
+            [26.0721331, -80.1434289],
+            [38.8951, -77.0367],
+            [37.47472222, -84.51194444],
+            [-43.5877, 170.3666],
+            [43.50777141, -79.64399856],
+            [40.76653758, -73.96278405],
+            [56.9547, -98.309],
+            [62.1984, 17.5514],
+            [62.1984, 17.5514],
+            [48.88916901, 2.2842367],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.5243793, 3.3792057],
+            [6.40674257, 3.38378906],
+            [38.8951, -77.0367],
+            [42.2675, -83.74222222],
+            [40.72693892, -74.0752727],
+            [33.9755725, -118.2946652],
+            [40.76246983, -73.97391563],
+            [37.47472222, -84.51194444],
+            [27.7706, -82.6794],
+            [41.06809234, 28.99238438],
+            [50.501, 4.4768],
+            [62.1984, 17.5514],
+            [56.9547, -98.309],
+            [53.4196, -8.2406],
+            [1.3656, 103.8277],
+            [34.01509, -118.47345],
+            [41.7556004, -83.5779671],
+            [-45.15122187, -4.86399782],
+            [40.738525, -74.168732],
+            [33.9754876, -118.294642],
+            [40.809349, -74.181289],
+            [31.4587819, 74.3070857],
+            [37.47472222, -84.51194444],
+            [-16.7337389, -49.3368725],
+            [41.06809234, 28.99238438],
+            [41.89827572, -87.69051883],
+            [39.94130446, -75.15836535],
+            [40.41970731, -3.69855957],
+            [56.9547, -98.309],
+            [53.4196, -8.2406],
+            [62.1984, 17.5514],
+            [1.3656, 103.8277],
+            [18.2233, -66.4289],
+            [45.3750678, -75.64977533],
+            [19.4319, -99.1329],
+            [37.47472222, -84.51194444]
+        ]);
+
+        var options_global = {
+            // region: 'US',
+            title: 'Scenario: Entire globe',
+            displayMode: 'markers',
+            backgroundColor: '#81d4fa',
+            colorAxis: {
+                colors: ['red']
+            },
+            defaultColor: 'blue',
+            sizeAxis: {
+                minValue: 1,
+                maxValue: 4,
+                minSize: 1,
+                maxSize: 4
+            },
+            pointSize: 3
+        };
+
+        var options_US = {
+            title: 'Scenario: US of A only',
+            region: 'US',
+            displayMode: 'markers',
+            backgroundColor: '#81d4fa',
+            colorAxis: {
+                colors: ['red']
+            }
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+        chart.draw(data, options_global);
+
+        var chart_us = new google.visualization.GeoChart(document.getElementById('chart_us_div'));
+        chart_us.draw(data, options_US);
+
+    };
+    </script>
+</head>
+
+<body>
+    <h2 class="text-center">Tweet Locations</h2>
+    <div class="container-fluid text-center location-div">
+        <div class="col-md-6" id="chart_div" style="width: 800px; height: 500px;"></div>
+        <div class="col-md-6" id="chart_us_div" style="width: 800px; height: 500px;"></div>
+    </div>
+    <div class="jumbotron banner_link">
+        <h2 class="text-center">Analysis of US Elections 2016</h2>
+        <br>
+        <a href="/" class="hvr-float-shadow"><i class="fa fa-home"></i></a>
+        <a href="location" class="hvr-float-shadow"><i class="fa fa-location-arrow"></i>&nbsp;Tweet Locations</a>
+        <a href="popularity" class="hvr-float-shadow"><i class="fa fa-hand-spock-o"></i>&nbsp;Popularity</a>
+        <a href="top10" class="hvr-float-shadow"><i class="fa fa-hashtag"></i>&nbsp;Top 10 Hashtags</a>
+        <a href="orig_vs_rt" class="hvr-float-shadow"><i class="fa fa-files-o"></i>&nbsp;Original vs. Retweeted tweets</a>
+        <a href="favorites" class="hvr-float-shadow"><i class="fa fa-heart"></i>&nbsp;on Tweets</a>
+        <a href="tweet_type" class="hvr-float-shadow"><i class="fa fa-th"></i>&nbsp;Type of Tweets</a>
+        <br>
+        <br>
+        <br>
+        <h6 class="text-center">Built for PrecogSummer17 Task A | <a href="//manojpandey.me">Manoj Pandey</a></h6>
+        <h6 class="image-credit text-center"><a href="https://steemit.com/politics/@embat/trump-vs-hillary--who-will-be-the-next-us-president">image source.</a></h6>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="{{url_for('static', filename='js/vendor/bootstrap.min.js')}}"></script>
+    <script>
+    $(function() {
+        $('.banner_link a').hover(function() {
+            $('#pic').addClass('blur');
+        }, function() {
+            $('#pic').removeClass('blur');
+        });
+    });
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXXXXX-X', 'auto');
+    ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

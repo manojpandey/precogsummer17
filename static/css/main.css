@@ -1,4 +1,4 @@
-    html,
+html,
 body {
     height: 100%;
     width: 100%;
@@ -85,4 +85,10 @@ h6 {
 .banner_link a:hover:after {
     width: 0px;
     background: transparent;
+}
+
+/*// Location Page*/
+.location-div {
+    /*height: 80%;*/
+    padding: 50px 10px;
 }

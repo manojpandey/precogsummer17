@@ -21,10 +21,35 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#079ae7">
     <script src="{{url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+              ['Person', 'Total mentions in tweets'],
+              ['Hillary', 86543],
+              ['Trump', 123310],
+            ]);
+
+            var options = {
+              title: 'Mentions of Hillary and Trump in Tweets',
+              is3D: true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+          }
+        </script>
 </head>
 
 <body>
-    <div id="pic" class="container banner text-center">
+    <h2 class="text-center">Who is more popular. Eh?</h2>
+    <div class="container-fluid text-center location-div">
+        <!-- <div class="col-md-6" id="chart_div" style="width: 800px; height: 500px;"></div> -->
+        <div class="col-md-offset-3 col-md-8" id="piechart" style="width: 900px; height: 500px;"></div>
     </div>
     <div class="jumbotron banner_link">
         <h2 class="text-center">Analysis of US Elections 2016</h2>
